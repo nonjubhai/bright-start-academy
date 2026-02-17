@@ -7,13 +7,19 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import ClassDashboard from "./pages/ClassDashboard";
 import SubjectsOverview from "./pages/SubjectsOverview";
-import SubjectDetail from "./pages/SubjectDetail";
+import SubjectDashboard from "./pages/SubjectDashboard";
 import ImportantTopics from "./pages/ImportantTopics";
 import StudyPlan from "./pages/StudyPlan";
 import SkillBuilder from "./pages/SkillBuilder";
 import ReadingCorner from "./pages/ReadingCorner";
 import Struggling from "./pages/Struggling";
 import NextClassPreview from "./pages/NextClassPreview";
+import LessonsList from "./pages/LessonsList";
+import LessonPage from "./pages/LessonPage";
+import PracticePage from "./pages/PracticePage";
+import MiniTestPage from "./pages/MiniTestPage";
+import ActivitiesPage from "./pages/ActivitiesPage";
+import ProgressPage from "./pages/ProgressPage";
 
 const queryClient = new QueryClient();
 
@@ -27,7 +33,13 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/:board/:classId" element={<ClassDashboard />} />
           <Route path="/:board/:classId/subjects" element={<SubjectsOverview />} />
-          <Route path="/:board/:classId/subjects/:subjectId" element={<SubjectDetail />} />
+          <Route path="/:board/:classId/subjects/:subjectId" element={<SubjectDashboard />} />
+          <Route path="/:board/:classId/subjects/:subjectId/lessons" element={<LessonsList />} />
+          <Route path="/:board/:classId/subjects/:subjectId/lessons/:lessonId" element={<LessonPage />} />
+          <Route path="/:board/:classId/subjects/:subjectId/practice" element={<PracticePage />} />
+          <Route path="/:board/:classId/subjects/:subjectId/tests" element={<MiniTestPage />} />
+          <Route path="/:board/:classId/subjects/:subjectId/activities" element={<ActivitiesPage />} />
+          <Route path="/:board/:classId/subjects/:subjectId/progress" element={<ProgressPage />} />
           <Route path="/:board/:classId/topics" element={<ImportantTopics />} />
           <Route path="/:board/:classId/study-plan" element={<StudyPlan />} />
           <Route path="/:board/:classId/skill-builder" element={<SkillBuilder />} />
