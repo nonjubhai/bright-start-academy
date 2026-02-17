@@ -27,6 +27,11 @@ const Breadcrumbs = () => {
     hindi: "Hindi",
     evs: "EVS",
     gk: "General Knowledge",
+    lessons: "Lessons",
+    practice: "Practice",
+    tests: "Mini Tests",
+    activities: "Activities",
+    progress: "Progress",
   };
 
   return (
